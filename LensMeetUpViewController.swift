@@ -18,7 +18,22 @@ class LensMeetUpViewController: UIViewController {
     // MARK: - UI Setup
     
     private func setupViews() {
-        // Add your UI components and layout constraints here
+        // Set the background color to purple
+        view.backgroundColor = UIColor.purple
+        
+        // Add a white label for the app title
+        let titleLabel = UILabel()
+        titleLabel.text = "LensMeetUp"
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(titleLabel)
+        
+        // Center the title label horizontally and vertically
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
     
     // MARK: - Networking
